@@ -1,10 +1,10 @@
 /// <reference types="cypress" />
 
 describe('Input Form Cypress', () => {
-    beforeEach("Je charge mon application", () => {
+    beforeEach("I load my application", () => {
         cy.visit("https://practice.automationbro.com/support-form/")
     })
-    it('Verifier les infos du formulaire', () =>{
+    it('Check the information of the form', () =>{
         cy.get('[class="evf-field-label"]').should('contain.text','Name')
         cy.get('#evf-680-field_lVizlNhYus-1').should('be.visible')
 
@@ -27,14 +27,14 @@ describe('Input Form Cypress', () => {
         cy.get('#evf-submit-680').should('contain.text', "Submit")
 
     })
-    it('verification des champs obligatoires', () =>{
+    it('check the required fields', () =>{
         cy.get('#evf-submit-680').click()
         cy.get('#evf-680-field_lVizlNhYus-1-error').should('contain.text', "This field is required.")
         cy.get('#evf-680-field_XYnMdkQDKM-3-error').should('contain.text', "Please enter a valid email address.")
         cy.get('#evf-680-field_xJivsqAS2c-2-error').should('contain.text', "This field is required.")
     })
 
-    it('Renseigner le formulaire de contact', () =>{
+    it('Fill in the contact form', () =>{
         cy.get('#evf-680-field_lVizlNhYus-1').type("My Name")
         cy.get('#evf-680-field_XYnMdkQDKM-3').type("email@gmail.com")
         cy.get('#evf-680-field_xJivsqAS2c-2').type("My Subject")

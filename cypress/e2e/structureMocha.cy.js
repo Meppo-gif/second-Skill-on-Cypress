@@ -1,18 +1,18 @@
 /// <reference types="cypress" />
-describe('Ma suite de test', function test(){
-    it('cas de test 1', ()=>{
+describe('My test suite', function test(){
+    it('test case 2', ()=>{
 
     })
-    it('cas de test 2',()=>{
+    it('test case 2',()=>{
 
     })
-    it('cas de test 3',()=>{
+    it('test case 2',()=>{
         
     })
 })
-describe('Ma suite de test 2', function(){
+describe('My test suite 2', function(){
 
 })
-describe('Ma suite de test 3',()=>{
+describe('My test suite 3',()=>{
 
 })

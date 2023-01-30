@@ -1,29 +1,29 @@
 /// <reference types="cypress" />
 
-describe('Fonction Hook', () => {
+describe('Hook function', () => {
 
     before(function() {
-        //est execute une seule fois avnt tous les tetsts
+        //is executed once before all tests
         cy.log('Hook Befor')
     })
     beforeEach(function() {
-        //est execute avant chaque bloc de test
+        //is executed before each test block
         cy.log('Hook BeforeEaach')
     })
     afterEach(function() {
-        //est execute apres chaque bloc de test
+        //is executed after each test block
         cy.log('Hook afterEach')
     })
     after(function() {
-        //est execute a la fin de tous les blocs de test
+        //is executed at the end of all test blocks
         cy.log('Hook After')
     })
-    it('Mon premier bloc de test', () => {
-        cy.log("Premier test")
+    it('My first test block', () => {
+        cy.log("First test")
     })
 
-    it.skip('Mon deuxieme bloc de test', () => {
-        cy.log("Deuxieme test")
+    it.skip('My second test block', () => {
+        cy.log("Second test")
     })
 
 })
